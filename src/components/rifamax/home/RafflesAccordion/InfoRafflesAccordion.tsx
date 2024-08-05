@@ -1,13 +1,15 @@
+import { day } from '@utils/time';
 import { Text, Title } from '@mantine/core';
+import { IInfoRafflesAccordion } from '@interfaces/index';
 
-export function InfoRafflesAccordion() {
+export function InfoRafflesAccordion({ title, init_date, seller }: IInfoRafflesAccordion) {
   return (
     <div>
       <Text fs='italic'>
-        05/08/2024
+        {day(init_date)}
       </Text>
       <Title mr={30} order={3} fw={500}>
-        500$
+        {title}
       </Title>
       <Text
         size="md"
@@ -15,7 +17,7 @@ export function InfoRafflesAccordion() {
         variant="gradient"
         gradient={{ from: 'cyan', to: 'blue', deg: 49 }}
       >
-        Alfredo Serrano
+        {seller}
       </Text>
     </div>
   );

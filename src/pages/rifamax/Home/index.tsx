@@ -31,7 +31,7 @@ function index() {
 
   return (
     <Wrapper>
-      <RafflesAccordion step={1} />
+      <RafflesAccordion step={1} data={[]} />
     </Wrapper>
   )
 }

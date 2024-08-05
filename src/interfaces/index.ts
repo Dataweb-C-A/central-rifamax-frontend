@@ -52,6 +52,25 @@ export interface ILoaderBlur {
 }
 
 /**
+ * @interface IInfoRafflesAccordion
+ * @description InfoRafflesAccordion component props interface
+ */
+export interface IInfoRafflesAccordion {
+  title: string;
+  init_date: string;
+  seller: string;
+}
+
+/**
+ * @interface ITitlesRafflesAccordion
+ * @description TitlesRafflesAccordion component props interface
+ */
+export interface ITitlesRafflesAccordion {
+  id: number;
+  numbers: number;
+}
+
+/**
  * @type HttpMethod
  * @description This is the type for the HTTP methods
  */

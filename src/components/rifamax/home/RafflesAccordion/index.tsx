@@ -7,25 +7,17 @@ import { AccordionStepTwo } from '../RafflesAccordion/AccordionStepTwo';
 import { InfoRafflesAccordion } from '../RafflesAccordion/InfoRafflesAccordion';
 import { TitlesRafflesAccordion } from '../RafflesAccordion/TitlesRafflesAccordion';
 
-const groceries = [
-  {
-    value: 'Apples',
-    emoji: '🍎',
-    description: 'An apple a day keeps the doctor away!',
-  },
-];
-
-function Index({ step }: IRafflesAccordion) {
+function Index({ step, data }: IRafflesAccordion) {
   const [selected, setSelected] = useState<string | null>(null);
 
   const handleSelect = (key: string) => {
     setSelected(selected === key ? null : key);
   }
 
-  const items = groceries.map((item, key: number) => (
+  const raffles = data.raffles.map((raffle, key: number) => (
     <>
       <Accordion.Item
-        key={item.value}
+        key={raffle.value}
         className={selected === String(key) ? classes.itemActive : classes.item}
         value={String(key)}
       >
@@ -42,7 +34,7 @@ function Index({ step }: IRafflesAccordion) {
             </Group>
           </Group>
         </Accordion.Control>
-        <Accordion.Panel>{item.description}</Accordion.Panel>
+        <Accordion.Panel>{raffle.title}</Accordion.Panel>
       </Accordion.Item>
       <Divider variant='dashed' my={5} />
     </>
@@ -59,7 +51,7 @@ function Index({ step }: IRafflesAccordion) {
       variant="filled"
       chevron={false}
     >
-      {items}
+      {raffles}
     </Accordion>
   );
 }
