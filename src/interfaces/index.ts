@@ -1,6 +1,7 @@
 // General interfaces
 
 import { IUser } from "./models.interfaces";
+import { IRafflesResponse } from "./requests.interfaces";
 
 export interface ILoginBody {
   email: string;
@@ -33,6 +34,14 @@ export interface IAuthRoute {
   roles: string[]
 }
 
+/**
+ * @interface IRafflesAccordion
+ * @description RafflesAccordion component props interface 
+ */
+export interface IRafflesAccordion {
+  step: number
+  data: IRafflesResponse
+}
 
 /**
  * @interface ILoaderBlur

@@ -2,6 +2,7 @@ import { day } from '@utils/time'
 import { Button, Text, Title } from '@mantine/core'
 import { modals } from '@mantine/modals'
 import { IconPlus } from '@tabler/icons-react'
+import styles from '../home/RafflesAccordion/AccordionStepTwo.module.css';
 
 function AddRaffleModal() {
   const openAddRaffleModal = () => modals.open({
@@ -26,14 +27,16 @@ function AddRaffleModal() {
 
   return (
     <>
-      <Button
-        variant='light' 
-        color='blue' 
-        leftSection={<IconPlus />}
-        onClick={openAddRaffleModal}
-      >
-        Añadir rifa
-      </Button>
+
+        <Button
+          ml={45}
+          variant='light'
+          color='blue'
+          leftSection={<IconPlus />}
+          onClick={openAddRaffleModal}
+        >
+          Añadir rifa
+        </Button>
     </>
   )
 }

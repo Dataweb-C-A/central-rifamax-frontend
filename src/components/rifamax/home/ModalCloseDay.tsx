@@ -1,7 +1,8 @@
-import { day } from '@utils/time'
-import { modals } from '@mantine/modals'
-import { IconX } from '@tabler/icons-react'
-import { Button, Text, Title } from '@mantine/core'
+import styles from '../home/RafflesAccordion/AccordionStepTwo.module.css';
+import { day } from '@utils/time';
+import { modals } from '@mantine/modals';
+import { IconX } from '@tabler/icons-react';
+import { Button, Text, Title } from '@mantine/core';
 
 function CloseDayModal() {
   const openCloseDayModal = () => modals.open({
@@ -22,20 +23,20 @@ function CloseDayModal() {
         cerrar dia
       </Text>
     ),
-  })
+  });
 
   return (
-    <>
+    <div className={styles.centerButtons}>
       <Button
-        variant='light' 
-        color='red' 
+        variant='light'
+        color='red'
         leftSection={<IconX />}
         onClick={openCloseDayModal}
       >
         Cerrar día
       </Button>
-    </>
-  )
+    </div>
+  );
 }
 
-export default CloseDayModal
+export default CloseDayModal;

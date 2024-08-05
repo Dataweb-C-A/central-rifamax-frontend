@@ -1,7 +1,7 @@
-import { Image } from '@mantine/core';
-import classes from './Header.module.css';
-import LinksList from './LinksList';
 import Profile from './Profile';
+import LinksList from './LinksList';
+import classes from './Header.module.css';
+import { Image } from '@mantine/core';
 
 function Navbar() {
   return (

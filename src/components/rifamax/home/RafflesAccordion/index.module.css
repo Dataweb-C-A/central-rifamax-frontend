@@ -17,8 +17,3 @@
   background-color: var(--mantine-color-dark-7);
   border-radius: 0 0 var(--mantine-radius-md) var(--mantine-radius-md);
 }
-
-.icon {
-  width: 20px;
-  height: 20px;
-}
