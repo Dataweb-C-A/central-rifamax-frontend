@@ -1,8 +1,4 @@
 import { 
-  IconFileBarcode, 
-  IconDeviceMobile, 
-  IconDeviceMobileCheck, 
-  IconPdf, 
   IconPrinter, 
   IconDeviceMobileMessage 
 } from '@tabler/icons-react';

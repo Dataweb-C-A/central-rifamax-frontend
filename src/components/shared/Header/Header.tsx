@@ -8,7 +8,7 @@ function Navbar() {
     <header className={classes.header}>
       <div className={classes.logoWrapper}>
         <Image 
-          src="/images/logo.png" 
+          src="/images/logo1.png" 
           alt="Rifamax Logo" 
           h='1.5rem'
           className={classes.logo}

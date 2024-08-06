@@ -41,8 +41,8 @@ export interface IRafflesResponse {
     sell_status: string;
     title: string;
     uniq_identifier_serial: string;
-    user: IUser;
-    seller: IUser;
+    user: IUser["user"];
+    seller: IUser["user"];
   }[],
   metadata: {
     items: number;
@@ -50,4 +50,15 @@ export interface IRafflesResponse {
     page: number;
     pages: number;
   }
+}
+
+/**
+ * @interface IGetRaffles
+ * @description Interface of getRaffles request function
+ */
+export interface IGetRaffles {
+  token: string;
+  queryType?: 'newest' | 'initialized';
+  page: number;
+  items: number; 
 }

@@ -9,7 +9,7 @@ const meta: Meta = {
 
 export default meta;
 
-const Template: StoryFn = (args) => <Card><RafflesAccordion {...args} /></Card>;
+const Template: StoryFn = (args) => <Card><RafflesAccordion step={0} data={[]} {...args} /></Card>;
 
 export const Default = Template.bind({});
 Default.args = {};

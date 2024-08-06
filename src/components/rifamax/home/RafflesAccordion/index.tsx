@@ -14,10 +14,10 @@ function Index({ step, data }: IRafflesAccordion) {
     setSelected(selected === key ? null : key);
   }
 
-  const raffles = data.raffles.map((raffle, key: number) => (
+  const raffles = data.map((raffle, key: number) => (
     <>
       <Accordion.Item
-        key={raffle.value}
+        key={raffle.id}
         className={selected === String(key) ? classes.itemActive : classes.item}
         value={String(key)}
       >
@@ -26,8 +26,8 @@ function Index({ step, data }: IRafflesAccordion) {
         >
           <Group justify="space-between" >
             <Group>
-              <TitlesRafflesAccordion />
-              <InfoRafflesAccordion />
+              <TitlesRafflesAccordion id={raffle.id} numbers={raffle.numbers}/>
+              <InfoRafflesAccordion title={raffle.title} init_date={raffle.init_date} seller={raffle.seller.name} />
             </Group>
             <Group>
               {step === 1 ? <AccordionStepOne /> : <AccordionStepTwo />}

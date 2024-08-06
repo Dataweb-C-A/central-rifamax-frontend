@@ -1,18 +1,14 @@
 import { Button } from '@mantine/core';
-import { IconFileBarcode, IconDeviceMobile,IconCoin, IconMailDollar, IconMailX, IconMailForward } from '@tabler/icons-react';
-
+import { IconMailDollar, IconMailX } from '@tabler/icons-react';
+import ReturnRaffleModal from '../ReturnRaffleModal';
+import NoPayRaffleModal from '../NoPayRaffleModal';
+import PayRaffle from '../PayRaffle';
 export function AccordionStepTwo() {
   return (
     <>
-      <Button variant="light" color="teal" leftSection={<IconMailDollar />}>
-        Pagar rifa {/* TODO: Transform in a modal independient component */}
-      </Button>
-      <Button variant="light" color="red" leftSection={<IconMailX />}>
-        Rifa no pagada {/* TODO: Transform in a modal independient component */}
-      </Button>
-      <Button variant="light" leftSection={<IconMailForward />}>
-        Devolver rifa {/* TODO: Transform in a modal independient component */}
-      </Button>
+     <PayRaffle/>
+      <ReturnRaffleModal/>
+     <NoPayRaffleModal/>
     </>
   );
 }

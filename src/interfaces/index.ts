@@ -40,7 +40,7 @@ export interface IAuthRoute {
  */
 export interface IRafflesAccordion {
   step: number
-  data: IRafflesResponse
+  data: IRafflesResponse["raffles"]
 }
 
 /**
@@ -68,6 +68,15 @@ export interface IInfoRafflesAccordion {
 export interface ITitlesRafflesAccordion {
   id: number;
   numbers: number;
+}
+
+/**
+ * @interface IWoodTitle
+ * @description WoodTitle component props interface
+ */
+export interface IWoodTitle {
+  title: string;
+  variant: 'dashed' | 'dotted' | 'default'
 }
 
 /**
