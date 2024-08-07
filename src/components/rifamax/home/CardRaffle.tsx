@@ -1,8 +1,7 @@
 
+import Cardtittle from './Cardtittle';
 import { ICardRaffle } from '@interfaces/index';
 import { Button, Text, Divider, Card, Image, Center } from '@mantine/core'
-import Cardtittle from './Cardtittle';
-
 
 function CardRaffle({ raffle }: ICardRaffle) {
   return (
