@@ -1,8 +1,8 @@
+import StepperRaffle from './StepperRaffle';
 import { day } from '@utils/time'
 import { modals } from '@mantine/modals'
 import { IconPlus } from '@tabler/icons-react'
 import { Button, Text, Title } from '@mantine/core'
-import StepperRaffle from './StepperRaffle';
 
 function AddRaffleModal() {
   const openAddRaffleModal = () => modals.open({
@@ -26,7 +26,6 @@ function AddRaffleModal() {
 
   return (
     <>
-
       <Button 
         variant='light'
         color='blue'
