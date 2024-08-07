@@ -17,3 +17,35 @@ export interface IUser {
     is_first_entry: boolean;
   }
 }
+
+/**
+ * @interface IPrize
+ * @description This is a general interface for prizes on rifamax module
+ */
+export interface IPrize {
+  award: string;
+  plate: string | null;
+  is_money: boolean;
+  sign: boolean;
+}
+
+/**
+ * @interface IRaffle
+ * @description This is a general interface for raffles on rifamax module
+ */
+export interface IRaffle {
+  id: number;
+  admin_status: string;
+  currency: string;
+  expired_date: string;
+  init_date: string;
+  lotery: string;
+  numbers: number;
+  price: number;
+  prizes: IPrize[];
+  sell_status: string;
+  title: string;
+  uniq_identifier_serial: string;
+  user: IUser["user"];
+  seller: IUser["user"];
+}

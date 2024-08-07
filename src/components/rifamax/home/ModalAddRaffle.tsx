@@ -2,6 +2,7 @@ import { day } from '@utils/time'
 import { modals } from '@mantine/modals'
 import { IconPlus } from '@tabler/icons-react'
 import { Button, Text, Title } from '@mantine/core'
+import StepperRaffle from './StepperRaffle';
 
 function AddRaffleModal() {
   const openAddRaffleModal = () => modals.open({
@@ -13,29 +14,27 @@ function AddRaffleModal() {
         </Text>
       </>
     ),
-    size: 'lg',
-    centered: true,
+    size: 'xl',
+    // centered: true,
     closeOnClickOutside: false,
     children: (
-      // TODO: form COMPONENT goes here
-      <Text size='sm'>
-        crear nueva rifa prueba
-      </Text>
+      <>
+        <StepperRaffle/>
+      </>
     ),
   })
 
   return (
     <>
 
-        <Button
-          ml={45}
-          variant='light'
-          color='blue'
-          leftSection={<IconPlus />}
-          onClick={openAddRaffleModal}
-        >
-          Añadir rifa
-        </Button>
+      <Button 
+        variant='light'
+        color='blue'
+        leftSection={<IconPlus />}
+        onClick={openAddRaffleModal}
+      >
+        Añadir rifa
+      </Button>
     </>
   )
 }

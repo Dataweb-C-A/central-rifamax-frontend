@@ -1,6 +1,6 @@
 // API responses interfaces
 
-import { IUser } from "./models.interfaces";
+import { IPrize, IRaffle, IUser } from "./models.interfaces";
 
 /**
  * @interface IRenewTokenResponse
@@ -28,22 +28,7 @@ export interface ILoginResponse {
  * @description This is the interface for the response of the raffles endpoint
  */
 export interface IRafflesResponse {
-  raffles: {
-    id: number;
-    admin_status: string;
-    currency: string;
-    expired_date: string;
-    init_date: string;
-    lotery: string;
-    numbers: number;
-    price: number;
-    // prizes: IPrize[];
-    sell_status: string;
-    title: string;
-    uniq_identifier_serial: string;
-    user: IUser["user"];
-    seller: IUser["user"];
-  }[],
+  raffles: IRaffle[],
   metadata: {
     items: number;
     count: number;

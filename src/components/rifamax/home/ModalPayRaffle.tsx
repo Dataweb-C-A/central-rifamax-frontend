@@ -11,7 +11,7 @@ function ModalPayRaffle() {
       <>
         <WoodTitle title="¿Desea pagar esta rifa?" variant="dashed" />
         <Text ta="center">
-          Una vez realizada el rifero será bloqueado y no podrá crear nuevas rifas hasta nuevo aviso.
+        Una vez realizado el pago de la rifa esta no podrá ser modificada, está seguro de realizar esta acción?
         </Text>
         <Group mt={15} mb={15} gap={10} justify="space-between">
           <NumberInput

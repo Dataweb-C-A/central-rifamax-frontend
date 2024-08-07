@@ -1,6 +1,6 @@
 // General interfaces
 
-import { IUser } from "./models.interfaces";
+import { IRaffle, IUser } from "./models.interfaces";
 import { IRafflesResponse } from "./requests.interfaces";
 
 export interface ILoginBody {
@@ -41,6 +41,23 @@ export interface IAuthRoute {
 export interface IRafflesAccordion {
   step: number
   data: IRafflesResponse["raffles"]
+}
+
+/**
+ * @interface IAddRaffleForm
+ * @description AddRaffleForm component props interface
+ */
+export interface IAddRaffleForm {
+  onNext?: () => void;
+  onBack?: () => void;
+}
+
+/**
+ * @interface ICardRaffle
+ * @description CardRaffle component props interface
+ */
+export interface ICardRaffle {
+  raffle: IRaffle;
 }
 
 /**
