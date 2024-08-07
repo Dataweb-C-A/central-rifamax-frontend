@@ -1,10 +1,9 @@
-// AddRaffleForm.jsx
 import { useState } from 'react';
 import { useForm } from '@mantine/form';
 import { DateInput } from '@mantine/dates';
+import { IAddRaffleForm } from '@interfaces/index';
 import { Button, Group, Grid, TextInput, Text, Switch, Divider, NumberInput, Select } from '@mantine/core';
 import { IconClock, IconGift, IconArrowBigDownFilled, IconCar, IconNumber, IconCurrencyDollar } from '@tabler/icons-react';
-import { IAddRaffleForm } from '@interfaces/index';
 
 function AddRaffleForm({ onNext, onBack }: IAddRaffleForm) {
   const [value, setValue] = useState<Date | null>(null);
