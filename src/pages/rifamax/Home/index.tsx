@@ -2,6 +2,7 @@ import Titles from '@components/shared/Titles'
 import useAuth from '@hooks/useAuth'
 import classes from './index.module.css'
 import LoaderBlur from '@/components/shared/Loaders/LoaderBlur'
+import StacksRaffle from '@/components/rifamax/home/StacksRaffle'
 import ActionButtons from '@components/rifamax/home/ActionButtons'
 import RafflesAccordion from '@components/rifamax/home/RafflesAccordion'
 import { useState } from 'react'
@@ -11,7 +12,7 @@ import { getRaffles } from '@api/rifamax/Raffles.request'
 import { AxiosResponse } from 'axios'
 import { IRafflesResponse } from '@interfaces/requests.interfaces'
 import { Grid } from '@mantine/core';
-import StacksRaffle from '@/components/rifamax/home/StacksRaffle'
+
 interface IWrapper {
   children?: React.ReactNode
 }
