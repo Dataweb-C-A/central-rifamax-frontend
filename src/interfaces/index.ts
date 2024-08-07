@@ -79,6 +79,16 @@ export interface IInfoRafflesAccordion {
 }
 
 /**
+ * @interface IStacksRaffle
+ * @description IStacksRaffle component props interface
+ */
+export interface IStacksRaffle {
+  color: string;
+  number: number;
+  title: string;
+} 
+
+/**
  * @interface ITitlesRafflesAccordion
  * @description TitlesRafflesAccordion component props interface
  */
