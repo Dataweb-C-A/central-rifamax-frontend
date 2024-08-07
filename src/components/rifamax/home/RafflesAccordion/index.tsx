@@ -1,11 +1,11 @@
 import classes from './index.module.css';
 import { useState } from 'react';
 import { IRafflesAccordion } from '@interfaces/index';
+import { Accordion, Divider, Group } from '@mantine/core';
 import { AccordionStepOne } from '../RafflesAccordion/AccordionStepOne';
 import { AccordionStepTwo } from '../RafflesAccordion/AccordionStepTwo';
 import { InfoRafflesAccordion } from '../RafflesAccordion/InfoRafflesAccordion';
 import { TitlesRafflesAccordion } from '../RafflesAccordion/TitlesRafflesAccordion';
-import { Accordion, Divider, Group } from '@mantine/core';
 import CardRaffle from '../CardRaffle';
 
 function Index({ step, data }: IRafflesAccordion) {
