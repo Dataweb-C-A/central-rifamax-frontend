@@ -1,5 +1,6 @@
-import React from "react";
-import { Title, Card, Group, Text, Divider } from "@mantine/core";
+import React from 'react'
+import { IStackRaffles } from '@interface/index'
+import { Title, Card, Group, Text, Divider } from '@mantine/core'
 
 function StacksRaffle({ color, number, title }: IStackRaffles) {
   return (
