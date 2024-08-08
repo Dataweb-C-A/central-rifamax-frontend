@@ -1,6 +1,6 @@
 import AddRaffleForm from '@/form/rifamax/Home/AddRaffle.form';
 import { useState } from 'react';
-import { Stepper, Button } from '@mantine/core';
+import { Stepper } from '@mantine/core';
 
 function StepperRaffle() {
   const [active, setActive] = useState(0);
