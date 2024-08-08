@@ -7,7 +7,7 @@ import ActionButtons from '@components/rifamax/home/ActionButtons'
 import RafflesAccordion from '@components/rifamax/home/RafflesAccordion'
 import { useState } from 'react'
 import { useQuery } from '@tanstack/react-query'
-import { Pagination } from '@mantine/core'
+import { Pagination, ScrollArea } from '@mantine/core'
 import { getRaffles } from '@api/rifamax/Raffles.request'
 import { AxiosResponse } from 'axios'
 import { IRafflesResponse } from '@interfaces/requests.interfaces'
@@ -83,7 +83,9 @@ function index() {
   return (
     <>
       <Wrapper>
-        <RafflesAccordion step={2} data={rafflesData?.data.raffles || []} />
+        <ScrollArea.Autosize h='calc(100vh - 275px)' type='never' scrollbars="y">
+          <RafflesAccordion step={2} data={rafflesData?.data.raffles || []} />
+        </ScrollArea.Autosize>
       </Wrapper>
     </>
   )

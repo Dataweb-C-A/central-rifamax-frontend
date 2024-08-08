@@ -19,7 +19,7 @@ To get started with Central Rifamax, you'll need to have Node.js and Yarn instal
 
 1. Clone the repository:
    ```sh
-   git clone https://github.com/your-username/central-rifamax.git
+   git clone https://github.com/Dataweb-C-A/central-rifamax-frontend.git
    ```
 2. Navigate to the project directory:
    ```sh
@@ -51,9 +51,9 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Contact
 
-Rifamax Team - [email](mailto:contact@rifamax.com)
+Rifamax Team - [email](mailto:javierdiazt406@icloud.com)
 
-Project Link: [https://github.com/your-username/central-rifamax](https://github.com/your-username/central-rifamax)
+Project Link: [https://github.com/your-username/central-rifamax](https://github.com/Dataweb-C-A/central-rifamax-frontend)
 
 ---
 

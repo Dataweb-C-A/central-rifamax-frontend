@@ -15,7 +15,7 @@ function ModalSendToApp() {
   })
 
   return (
-    <Button variant="light" color="blue" leftSection={<IconDeviceMobileMessage />} onClick={openSentToAppModal}>
+    <Button variant="light" color="blue" size="xs" leftSection={<IconDeviceMobileMessage size="1.2rem" />} onClick={openSentToAppModal}>
       Enviar a APP
     </Button>
   );

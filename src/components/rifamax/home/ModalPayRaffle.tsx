@@ -42,7 +42,7 @@ function ModalPayRaffle() {
   })
 
   return (
-    <Button variant="light" color="teal" leftSection={<IconMailDollar />} onClick={openPayRaffleModal}>
+    <Button variant="light" size="xs" color="teal" leftSection={<IconMailDollar size='1.2rem' />} onClick={openPayRaffleModal}>
       Pagada
     </Button>
   );

@@ -15,7 +15,7 @@ function ModalPrintTickets() {
   })
 
   return (
-    <Button variant="light" color="blue" leftSection={<IconPrinter />} onClick={openPrintTicketsModal}>
+    <Button variant="light" color="blue" size="xs" leftSection={<IconPrinter size="1.2rem"/>} onClick={openPrintTicketsModal}>
       Imprimir tickets
     </Button>
   );

@@ -24,7 +24,7 @@ function ModalRefundRaffle() {
 
   return (
      
-    <Button variant="light" leftSection={<IconMailForward />} onClick={openRefundRaffleModal}>
+    <Button variant="light" size="xs" leftSection={<IconMailForward size="1.2rem"/>} onClick={openRefundRaffleModal}>
       Devolver
     </Button>
   );

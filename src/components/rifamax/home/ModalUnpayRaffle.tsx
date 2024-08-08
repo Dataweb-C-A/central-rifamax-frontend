@@ -21,7 +21,7 @@ function ModalUnpayRaffle() {
   })
 
   return (
-    <Button variant="light" color="red" leftSection={<IconMailX />} onClick={openUnpayRaffleModal}>
+    <Button variant="light" size="xs" color="red" leftSection={<IconMailX size="1.2rem" />} onClick={openUnpayRaffleModal}>
       No pagada
     </Button>
   );

@@ -1,5 +1,8 @@
 .home {
-  width: 100vw;
+  width: calc(100vw - 20px);
+  margin-left: 10px;
+  box-shadow: 0 0 7px #5f5f5f3d;
+  border-radius: var(--mantine-radius-sm);
   height: calc(100vh - 4.8rem);
   margin-top: 0.4rem;
   padding: 0 1rem;

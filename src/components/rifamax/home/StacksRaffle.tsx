@@ -1,16 +1,23 @@
-import React from 'react'
-import { IStackRaffles } from '@interface/index'
-import { Title, Card, Group, Text, Divider } from '@mantine/core'
+import { IStacksRaffle } from '@interfaces/index'
+import { Card, Group, Text, Divider } from '@mantine/core'
 
-function StacksRaffle({ color, number, title }: IStackRaffles) {
+function StacksRaffle({ color, number, title }: IStacksRaffle) {
   return (
-    <Card radius='sm' w='100%' mt={15} mb={10} ml={10} shadow="xl">
+    <Card 
+      py={10} 
+      px={12} 
+      mt={15} 
+      mb={10} 
+      ml={10} 
+      shadow="0 0 7px #5f5f5f3d"
+      radius='sm' 
+      w='100%' 
+    >
       <Group>
-        <Divider color={color} size="xl" orientation="vertical" />
+        <Divider color={color} size="md" orientation="vertical" />
         <div>
-          <Title order={3}>{number}</Title>
-          <Title order={5}></Title>
-          <Text size="lg" c="dimmed">{title}</Text>
+          <Text fz='20px'>{number}</Text>
+          <Text fz="14px" c="dimmed">{title}</Text>
         </div>
       </Group>
     </Card>
