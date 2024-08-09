@@ -4,7 +4,7 @@ import AddRaffleModal from '../ModalAddRaffle'
 
 function ActionButtons() {
   return (
-    <div className={classes.actionsWrapper}>
+    <div >
       <div className={classes.actionsButtons}>
         <AddRaffleModal />
         <CloseDayModal />

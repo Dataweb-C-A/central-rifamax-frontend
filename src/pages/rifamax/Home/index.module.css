@@ -9,11 +9,18 @@
   background-color: light-dark(var(--mantine-color-gray-1), var(--mantine-color-dark-6));
 }
 
-.wrapper {
-  width: 100%;
-  display: flex; 
-  flex-wrap: wrap; 
+.group-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
+
+@media (max-width: 768px) {
+  .group-container {
+    justify-content: center;
+  }
+}
+
 
 .titlesWrapper {
   width: 50%;

@@ -25,6 +25,7 @@ export interface IUser {
 export interface IPrize {
   award: string;
   plate: string | null;
+  year: string | null;
   is_money: boolean;
   wildcard: boolean;
 }

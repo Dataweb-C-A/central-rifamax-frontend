@@ -26,14 +26,17 @@ function AddRaffleModal() {
 
   return (
     <>
-      <Button 
-        variant='light'
-        color='blue'
-        leftSection={<IconPlus />}
-        onClick={openAddRaffleModal}
-      >
-        Añadir rifa
-      </Button>
+    <div className="flex justify-center md:justify-start">
+  <Button 
+    variant='light'
+    color='blue'
+    leftSection={<IconPlus />}
+    onClick={openAddRaffleModal}
+  >
+    Añadir rifa
+  </Button>
+</div>
+
     </>
   )
 }

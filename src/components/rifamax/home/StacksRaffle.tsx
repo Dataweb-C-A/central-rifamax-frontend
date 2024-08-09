@@ -8,7 +8,6 @@ function StacksRaffle({ color, number, title }: IStacksRaffle) {
       px={12} 
       mt={15} 
       mb={10} 
-      ml={10} 
       shadow="0 0 7px #5f5f5f3d"
       radius='sm' 
       w='100%' 

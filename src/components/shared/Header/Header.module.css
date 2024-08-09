@@ -12,10 +12,6 @@
   justify-content: center;
 }
 
-.actionsWrapper {
-  display: flex;
-  align-items: center;
-}
 
 .logo {
   user-select: none;

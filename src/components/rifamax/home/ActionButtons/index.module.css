@@ -6,15 +6,15 @@
   margin-top: 1.5rem;
 }
 
-@media (max-width: 62em) {
+@media (max-width: 768px) {
   .actionsWrapper {
     margin-top: 0.5rem;
     width: 100%;
+    justify-content: center; /* Centrar los botones en pantallas pequeñas */
   }
   .actionsButtons {
     width: 100%;
     margin-top: 0.5rem;
-    margin-top: 0rem;
   }
 }
 

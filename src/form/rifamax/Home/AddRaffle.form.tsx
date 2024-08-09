@@ -3,8 +3,8 @@ import { useForm } from '@mantine/form';
 import { useViewportSize } from '@mantine/hooks';
 import { DatePickerInput } from '@mantine/dates';
 import { IAddRaffleForm, IRaffleForm } from '@interfaces/index';
-import { Button, Divider, Group, NumberInput, Select, Switch, TextInput } from '@mantine/core';
-import { Icon123, IconAward, IconCalendar, IconCar, IconCoin, IconPlus, IconTrash } from '@tabler/icons-react';
+import { Button, Divider, Group, NumberInput, Select, Switch, TextInput, Grid } from '@mantine/core';
+import { Icon123, IconAward, IconCalendar, IconCar, IconClock, IconCoin, IconPlus, IconTrash } from '@tabler/icons-react';
 
 function AddRaffleForm({ onNext, onBack }: IAddRaffleForm) {
   const { width } = useViewportSize();
@@ -25,6 +25,7 @@ function AddRaffleForm({ onNext, onBack }: IAddRaffleForm) {
         {
           award: '',
           plate: null,
+          year: null,
           is_money: false,
           wildcard: true
         }
@@ -32,11 +33,11 @@ function AddRaffleForm({ onNext, onBack }: IAddRaffleForm) {
     },
     validate: {
       numbers: (value: number) => (
-        value > 0 
-          ? value <= 999 
-            ? null 
-              : 'Debe ser menor a 1000' 
-                : 'Debe ser mayor a 0'
+        value > 0
+          ? value <= 999
+            ? null
+            : 'Debe ser menor a 1000'
+          : 'Debe ser mayor a 0'
       ),
       price: (value: number) => (value > 0 ? null : 'El precio debe ser mayor a 0'),
       seller_id: (value: number) => (value > 0 ? null : 'Debe seleccionar un rifero'),
@@ -76,6 +77,18 @@ function AddRaffleForm({ onNext, onBack }: IAddRaffleForm) {
         placeholder={`Premio ${index === 0 ? 'con signo' : 'sin signo'}`}
         {...form.getInputProps(`prizes[${index}].award`)}
       />
+      <NumberInput
+        w='100%'
+        label="Modelo"
+        placeholder="Modelo"
+        size={FIELDS_SIZE}
+        mt={-10}
+        rightSection={<IconClock />}
+        key={form.key(`prizes.${index}.year`)}
+        disabled={form.getValues().prizes[index]?.is_money}
+        withAsterisk={!form.getValues().prizes[index]?.is_money}
+        {...form.getInputProps(`prizes[${index}].year`)}
+      />
       <TextInput
         mt={-10}
         label="Placa"
@@ -97,6 +110,7 @@ function AddRaffleForm({ onNext, onBack }: IAddRaffleForm) {
         onChange={(e) => {
           form.setFieldValue(`prizes.${index}.is_money`, e.currentTarget.checked)
           e.currentTarget.checked ? form.setFieldValue(`prizes.${index}.plate`, null) : form.setFieldValue(`prizes.${index}.plate`, '')
+          e.currentTarget.checked ? form.setFieldValue(`prizes.${index}.year`, null) : form.setFieldValue(`prizes.${index}.year`, '')
         }}
       />
     </Group>
@@ -132,7 +146,7 @@ function AddRaffleForm({ onNext, onBack }: IAddRaffleForm) {
   };
 
   return (
-    <form onSubmit={form.onSubmit(handleSubmit(form.values))}>
+    <form onSubmit={form.onSubmit(handleSubmit)}>
       <Group justify='space-between' mb={5}>
         <TextInput
           withAsterisk
@@ -143,7 +157,7 @@ function AddRaffleForm({ onNext, onBack }: IAddRaffleForm) {
           rightSection={<IconAward />}
           {...form.getInputProps('title')}
         />
-        <DatePickerInput 
+        <DatePickerInput
           withAsterisk
           w="calc(50% - 10px)"
           minDate={getDate(0)}
@@ -159,9 +173,9 @@ function AddRaffleForm({ onNext, onBack }: IAddRaffleForm) {
       <Group justify={PRIZES_JUSTIFY}>
         {prizesField}
       </Group>
-      <Divider 
-        size='xs' 
-        mt={10} 
+      <Divider
+        size='xs'
+        mt={10}
         label="Opciones de la rifa"
         labelPosition='center'
       />
@@ -173,37 +187,42 @@ function AddRaffleForm({ onNext, onBack }: IAddRaffleForm) {
         data={CURRENCIES}
         {...form.getInputProps('currency')}
       />
-      <Group justify='space-between' mt={5}>
-        <NumberInput
-          type="tel"
-          withAsterisk
-          label="Precio"
-          size={FIELDS_SIZE}
-          w="calc(33.23% - 10px)"
-          placeholder="Precio"
-          rightSection={<IconCoin />}
-          {...form.getInputProps('price')}
-        />
-        <NumberInput
-          type="tel"
-          withAsterisk
-          size={FIELDS_SIZE}
-          w="calc(33.24% - 10px)"
-          rightSection={<Icon123 />}
-          label="Números"
-          placeholder="Números"
-          {...form.getInputProps('numbers')}
-        />
-        <Select
-          size={FIELDS_SIZE}
-          withAsterisk
-          w="calc(33.23% - 10px)"
-          label="Lotería"
-          placeholder="Lotería"
-          data={LOTERIES}
-          {...form.getInputProps('lotery')}
-        />
-      </Group>
+
+      <Grid grow mt={10}>
+        <Grid.Col span={{ base: 6, md: 6, lg: 4 }}>
+          <NumberInput
+            type="tel"
+            withAsterisk
+            label="Precio"
+            size={FIELDS_SIZE}
+            placeholder="Precio"
+            rightSection={<IconCoin />}
+            {...form.getInputProps('price')}
+          />
+        </Grid.Col>
+        <Grid.Col span={{ base: 6, md: 6, lg: 4 }}>
+          <NumberInput
+            type="tel"
+            withAsterisk
+            size={FIELDS_SIZE}
+            rightSection={<Icon123 />}
+            label="Números"
+            placeholder="Números"
+            {...form.getInputProps('numbers')}
+          />
+        </Grid.Col>
+        <Grid.Col span={{ base: 12, md: 12, lg: 4 }}>
+          <Select
+            size={FIELDS_SIZE}
+            withAsterisk
+            label="Lotería"
+            placeholder="Lotería"
+            data={LOTERIES}
+            {...form.getInputProps('lotery')}
+          />
+        </Grid.Col>
+      </Grid>
+
       <Select
         mt={5}
         withAsterisk
